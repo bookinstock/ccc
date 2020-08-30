@@ -169,6 +169,8 @@ sizeof() & * ?:
 */
 
 
+int max(int n1, int n2);
+
 const int NUM_A = 1;
 
 const int NUM_B = 2;
@@ -282,11 +284,26 @@ int main(void) {
     printf("i=%d\n", i);
   }
 
+
+  // max
+  x =  max(1,2);
+  printf("x=%d\n", x);
   
   
   return 0;
 }
 
+
+int max(int n1, int n2) {
+  int r;
+
+  if (n1 >= n2) {
+    r = n1;
+  } else {
+    r = n2;
+  }
+  return r;
+}
 
 
 
