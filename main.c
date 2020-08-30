@@ -171,22 +171,31 @@ const int NUM_B = 2;
 
 int main(void) {
 
-  int c = NUM_A + NUM_B;
+  int test = NUM_A + NUM_B;
 
-  printf("c=%d\n", c);
+  printf("test=%d\n", test);
 
-  auto int x1 = 1;
+  unsigned int a = 60; // 60 = 00111100
+  unsigned int b = 13; // 13 = 00001101
+  int c = 0;
 
-  register int x2 = 1;
+  c = a & b; // 00001100
+  printf("a & b = %d\n", c);
 
-  static int x3 = 1;
+  c = a | b; // 00111101
+  printf("a | b = %d\n", c);
 
-  extern int x4 = 1;
+  c = a ^ b; // 00110001
+  printf("a ^ b = %d\n", c);
 
-  printf("x1=%d x2=%d\n", x1, x2);
-    
-  printf("hello  world\n");
+  c = ~a; // 11000011
+  printf("~a = %d\n", c);
 
+  c = a << 2; // 11110000
+  printf("a << 2 = %d\n", c);
+
+  c = a >> 2; // 00001111
+  printf("a >> 2 = %d\n", c);
 
   printf("int size= %lu", sizeof(int));
 
