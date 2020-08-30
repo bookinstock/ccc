@@ -146,6 +146,22 @@ others
   function
 
 
+--
+
+const
+
+auto register static extern
+
++ - * / % ++ -- 
+
+== != > < >= <=
+
+&& || !
+
+& | ^ ~ << >> 
+
+--
+
 */
 
 
@@ -157,7 +173,17 @@ int main(void) {
 
   int c = NUM_A + NUM_B;
 
-  printf("c=%d", c);
+  printf("c=%d\n", c);
+
+  auto int x1 = 1;
+
+  register int x2 = 1;
+
+  static int x3 = 1;
+
+  extern int x4 = 1;
+
+  printf("x1=%d x2=%d\n", x1, x2);
     
   printf("hello  world\n");
 
@@ -169,6 +195,9 @@ int main(void) {
     
   return 0;
 }
+
+
+
 
 // // The command line arguments used to run your program are also passed to main
 // // argc being the number of arguments - your program's name counts as 1
