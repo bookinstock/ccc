@@ -173,6 +173,10 @@ const int NUM_A = 1;
 
 const int NUM_B = 2;
 
+static int x = 0;
+
+static int i = 0;
+
 int main(void) {
 
   // hello
@@ -220,6 +224,37 @@ int main(void) {
   a2 = a1 == 4 ? 2 : 3;
   printf("a2=%d\n", a2);
 
+  // cond
+  x = 0;
+  printf("x=%d\n", x);
+
+  if (x) {
+    printf("yes");
+  } else {
+    printf("no");
+  }
+
+  // if else if else
+
+  i = 0 ;
+  while (i<5) {
+    printf("i=%d\n", i);
+    i ++; 
+  }
+
+  printf("===\n");
+
+  i = 0;
+  do {
+    printf("i=%d\n", i);
+    i ++;
+  } while (i < 5);
+
+  printf("===\n");
+
+  for (int i = 0; i < 5; i ++ ){
+    printf("i=%d\n", i);
+  }
   
   return 0;
 }
