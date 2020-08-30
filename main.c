@@ -155,9 +155,9 @@ const int NUM_B = 2;
 
 int main(void) {
 
-  int c = a + b;
+  int c = NUM_A + NUM_B;
 
-  print("c=a+b=%d", c)
+  printf("c=%d", c);
     
   printf("hello  world\n");
 
