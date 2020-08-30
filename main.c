@@ -229,9 +229,9 @@ int main(void) {
   printf("x=%d\n", x);
 
   if (x) {
-    printf("yes");
+    printf("yes\n");
   } else {
-    printf("no");
+    printf("no\n");
   }
 
   // if else if else
@@ -255,6 +255,34 @@ int main(void) {
   for (int i = 0; i < 5; i ++ ){
     printf("i=%d\n", i);
   }
+
+  printf("===\n");
+
+  for (int i = 0; i < 5; i ++ ){
+    if (i == 2) {
+      continue;
+    }
+    if (i == 4) {
+      break;
+    }
+    printf("i=%d\n", i);
+  }
+
+  printf("===\n");
+
+  i = 0;
+  for (;;) {
+    i++;
+    if (i > 10 ) {
+      break;
+    }
+    if (i % 2 == 0) {
+      continue;
+    }
+    printf("i=%d\n", i);
+  }
+
+  
   
   return 0;
 }
