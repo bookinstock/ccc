@@ -160,6 +160,10 @@ auto register static extern
 
 & | ^ ~ << >> 
 
+= += -= *= /= %= <<= >>= &= |= ^=
+
+sizeof() & * ?:
+
 --
 
 */
@@ -171,10 +175,13 @@ const int NUM_B = 2;
 
 int main(void) {
 
+  // hello
   int test = NUM_A + NUM_B;
 
   printf("test=%d\n", test);
 
+
+  // bit op
   unsigned int a = 60; // 60 = 00111100
   unsigned int b = 13; // 13 = 00001101
   int c = 0;
@@ -197,11 +204,23 @@ int main(void) {
   c = a >> 2; // 00001111
   printf("a >> 2 = %d\n", c);
 
-  printf("int size= %lu", sizeof(int));
 
-  printf("float size= %lu", sizeof(float));
+  // other op
+  int a1 = 4;
+  short a2;
+  double a3;
+  int* a4;
+  printf("%lu %lu %lu %lu\n", sizeof(a1), sizeof(a2), sizeof(a3), sizeof(a4));
+  printf("int size= %lu\n", sizeof(int));
+  printf("float size= %lu\n", sizeof(float));
 
-    
+  a4 = &a1;
+  printf("a1=%d a4=>%d\n", a1, *a4);
+
+  a2 = a1 == 4 ? 2 : 3;
+  printf("a2=%d\n", a2);
+
+  
   return 0;
 }
 
